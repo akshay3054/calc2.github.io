@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="body">
+    <div class="heading">
+      <h1>Furniture Price Calculator</h1>
+    </div>
+    <p class="options__heading">
+      <b>Enter Material Quantity Needed</b>
+    </p>
+    <div class="inputs">
+      <div class="input">
+        <p>Meter of Fabric</p>
+        <select class="" name="mof" id="mof">
+
+        </select>
+      </div>
+      <div class="input">
+        <p>Sheet thickness</p>
+        <select class="" name="sThick" id="sThick">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2" >2</option>
+          <option value="3">3</option>
+          <option value="4" selected>4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+        </select>
+      </div>
+      <div class="input">
+        <p>No Of Foam Sheets (Seat/Cushion)</p>
+        <select class="" name="nofs" id="nofs">
+
+        </select>
+      </div>
+      <div class="input">
+        <p>Padding Thickness</p>
+        <select class="" name="pThick" id="pThick">
+          <option value="0">0</option>
+          <option value="1" selected>1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+        </select>
+      </div>
+
+      <div class="input">
+        <p>No Of Foam Sheets (Padding)</p>
+        <select class="" name="nfsp" id="nfsp">
+
+        </select>
+      </div>
+
+    </div>
+
+    <div class="calculate">
+      <a href="javascript:void(0)" onclick="calculate()">Calculate</a>
+    </div>
+
+    <div class="results">
+      <p class="options__heading">
+        <b>Furniture Build Options</b>
+      </p>
+
+      <div class="result">
+        <p>
+          Option
+        </p>
+        <p>
+          Repair
+        </p>
+        <p>
+          New
+        </p>
+      </div>
+
+      <div class="result">
+        <p>
+          Luxury
+        </p>
+        <p class="price">
+          Rs <span id="luxrepair"> 0</span>
+        </p>
+        <p class="price">
+          Rs <span id="luxnew"> 0</span>
+        </p>
+      </div>
+      <div class="result">
+        <p>
+          Premium Fabric
+        </p>
+        <p class="price">
+          Rs <span id="pfrepair">0</span>
+        </p>
+        <p class="price">
+          Rs <span id="pfnew">0</span>
+        </p>
+      </div>
+      <div class="result">
+        <p>
+          Extra Comfortable
+        </p>
+        <p class="price">
+          Rs <span id="ecomfrepair">0</span>
+        </p>
+        <p class="price">
+          Rs <span id="ecomfnew">0</span>
+        </p>
+      </div>
+      <div class="result">
+        <p>
+          Standard
+        </p>
+        <p class="price">
+          Rs <span id="standrepair">0</span>
+        </p>
+        <p class="price">
+          Rs <span id="standnew">0</span>
+        </p>
+      </div>
+      <div class="result">
+        <p>
+          Budget
+        </p>
+        <p class="price">
+          Rs <span id="budrepair">0</span>
+        </p>
+        <p class="price">
+          Rs <span id="budnew">0</span>
+        </p>
+      </div>
+
+    </div>
+
+
+
+  </div>
+  <div class="footer">
+    <img src="https://entrackr.com/wp-content/uploads/2021/04/Urban-company.jpg" alt="">
+  </div>
+
+  <script type="text/javascript">
+    for(let i=0; i<=20;i +=0.5){
+      if(i==18){
+        document.getElementById("mof").innerHTML +=
+        `
+        <option value="${i}" selected>${i}</option>
+        `;
+
+        continue;
+      }
+      document.getElementById("mof").innerHTML +=
+      `
+      <option value="${i}">${i}</option>
+      `;
+    }
+    for(let i=0; i<=8;i +=0.5){
+      document.getElementById("nofs").innerHTML +=
+      `
+      <option value="${i}">${i}</option>
+      `;
+      document.getElementById("nfsp").innerHTML +=
+      `
+      <option value="${i}">${i}</option>
+      `;
+    }
+  </script>
+  <script src="main.js" charset="utf-8"></script>
+
+</body>
+</html>
