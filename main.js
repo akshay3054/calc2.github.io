@@ -109,8 +109,8 @@ let budget = {
   labour : 1000,
   salesInstallation : 1000,
   partnerMaterialMargin : 0,
-  ucComissionLabour : 20,
-  ucComissionMaterial : 20
+  ucComissionLabour : 15,
+  ucComissionMaterial : 15
 }
 
 function calculate(){
