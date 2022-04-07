@@ -45,8 +45,8 @@ let ultimateComfortable = {
 }
 
 let premium = {
-  fabric : 900,
-  foam : 1671,
+  fabric : 600,
+  foam : 1338,
   paddingFoam : 440,
   fevicol : 300,
   staplerPin : 120,
