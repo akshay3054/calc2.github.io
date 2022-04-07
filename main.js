@@ -1,5 +1,5 @@
 let luxury ={
-  fabric : 1200,
+  fabric : 1500,
   foam : 2500,
   paddingFoam : 440,
   fevicol : 300,
@@ -21,8 +21,8 @@ let luxury ={
   ucComissionMaterial : 15
 }
 
-let premium = {
-  fabric : 1200,
+let ultimateComfortable = {
+  fabric : 900,
   foam : 1671,
   paddingFoam : 440,
   fevicol : 300,
@@ -44,8 +44,8 @@ let premium = {
   ucComissionMaterial : 15
 }
 
-let extraComforatble = {
-  fabric : 600,
+let premium = {
+  fabric : 900,
   foam : 1671,
   paddingFoam : 440,
   fevicol : 300,
@@ -116,13 +116,13 @@ let budget = {
 function calculate(){
 
   let materialFabricNeeded = parseFloat(document.getElementById("mof").value);
-  let seatThickness = parseFloat(document.getElementById("sThick").value);
-  let noOfFoamSheets = parseFloat(document.getElementById("nofs").value);
-  let paddingThickness = parseFloat(document.getElementById("pThick").value);
-  let noOfFoamSheetsPadding = parseFloat(document.getElementById("nfsp").value);
+  let inchFour = parseFloat(document.getElementById("sThick").value); // 2
+  let inchTwo = parseFloat(document.getElementById("nofs").value); // 3
+  let inchOne = parseFloat(document.getElementById("pThick").value); // 4
+  let inchHalf = parseFloat(document.getElementById("nfsp").value); //5
 
-  let seatFoam = noOfFoamSheets*seatThickness
-  let paddingFoam = paddingThickness * noOfFoamSheetsPadding;
+  let seatFoam = 4*inchFour
+  let paddingFoam = inchTwo*2 + inchOne * 1 + inchHalf *0.5;
 
   let fevicol=2,
   staplerPin=1,
@@ -202,24 +202,24 @@ function calculate(){
   //Extra Comfortable Calculation
 
   let ecMatRep =
-  materialFabricNeeded*extraComforatble.fabric+
-  seatFoam * extraComforatble.foam +
-  paddingFoam * extraComforatble.paddingFoam +
-  fevicol * extraComforatble.fevicol +
-  staplerPin * extraComforatble.staplerPin+
-  nails * extraComforatble.nails +
-  thread * extraComforatble.thread +
-  jute * extraComforatble.jute +
-  bottomFabric * extraComforatble.bottomFabric
+  materialFabricNeeded*ultimateComfortable.fabric+
+  seatFoam * ultimateComfortable.foam +
+  paddingFoam * ultimateComfortable.paddingFoam +
+  fevicol * ultimateComfortable.fevicol +
+  staplerPin * ultimateComfortable.staplerPin+
+  nails * ultimateComfortable.nails +
+  thread * ultimateComfortable.thread +
+  jute * ultimateComfortable.jute +
+  bottomFabric * ultimateComfortable.bottomFabric
 
   let ecPatRep =
-  labour * extraComforatble.labour+
-  salesInstallation * extraComforatble.salesInstallation
+  labour * ultimateComfortable.labour+
+  salesInstallation * ultimateComfortable.salesInstallation
 
   let ecRepTotal =
   ecMatRep + ecPatRep +
-  (ecMatRep * extraComforatble.ucComissionMaterial / 100) +
-  (ecPatRep * extraComforatble.ucComissionLabour / 100)
+  (ecMatRep * ultimateComfortable.ucComissionMaterial / 100) +
+  (ecPatRep * ultimateComfortable.ucComissionLabour / 100)
 
   document.getElementById("ecomfrepair").innerHTML = Math.round(ecRepTotal)
 
@@ -337,27 +337,27 @@ function calculate(){
   //Extra Comfortable
 
   let ecAddLabCost =
-  additionalCarpenterPayments * extraComforatble.additionalCarpenterPayments +
-  helper * extraComforatble.helper
+  additionalCarpenterPayments * ultimateComfortable.additionalCarpenterPayments +
+  helper * ultimateComfortable.helper
 
   let ecLogisCost =
-  inboundLogistics * extraComforatble.inboundLogistics +
-  outboundLogistics * extraComforatble.outboundLogistics;
+  inboundLogistics * ultimateComfortable.inboundLogistics +
+  outboundLogistics * ultimateComfortable.outboundLogistics;
 
   let ecPatNew =
-  labour * extraComforatble.labour * 1.15 +
-  salesInstallation * extraComforatble.salesInstallation;
+  labour * ultimateComfortable.labour * 1.15 +
+  salesInstallation * ultimateComfortable.salesInstallation;
 
   let ecTotal =
   ecAddLabCost +
   ecLogisCost +
   ecPatNew +
-  (ecPatRep * extraComforatble.ucComissionLabour /100) +
-  (ecMatRep * extraComforatble.ucComissionMaterial / 100);
+  (ecPatRep * ultimateComfortable.ucComissionLabour /100) +
+  (ecMatRep * ultimateComfortable.ucComissionMaterial / 100);
 
   ecMatRep +=
-  plywood * extraComforatble.plywood +
-  packinigMaterialCost * extraComforatble.packinigMaterialCost
+  plywood * ultimateComfortable.plywood +
+  packinigMaterialCost * ultimateComfortable.packinigMaterialCost
 
   ecTotal += ecMatRep
 
