@@ -1,7 +1,7 @@
 let luxury ={
   fabric : 1500,
-  foam : 2500,
-  paddingFoam : 440,
+  foam : 3200,
+  paddingFoam : 900,
   fevicol : 300,
   staplerPin : 120,
   nails : 80,
