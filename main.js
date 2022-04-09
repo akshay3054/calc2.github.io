@@ -14,8 +14,8 @@ let luxury ={
   helper : 500,
   inboundLogistics : 500,
   outboundLogistics : 800,
-  labour : 1200,
-  salesInstallation : 1200,
+  labour : 1500,
+  salesInstallation : 1500,
   partnerMaterialMargin : 0,
   ucComissionLabour : 15,
   ucComissionMaterial : 15
@@ -37,8 +37,8 @@ let ultimateComfortable = {
   helper : 500,
   inboundLogistics : 500,
   outboundLogistics : 800,
-  labour : 1200,
-  salesInstallation : 1200,
+  labour : 1500,
+  salesInstallation : 1500,
   partnerMaterialMargin : 0,
   ucComissionLabour : 15,
   ucComissionMaterial : 15
@@ -60,8 +60,8 @@ let premium = {
   helper : 500,
   inboundLogistics : 500,
   outboundLogistics : 800,
-  labour : 1200,
-  salesInstallation : 1200,
+  labour : 1500,
+  salesInstallation : 1500,
   partnerMaterialMargin : 0,
   ucComissionLabour : 15,
   ucComissionMaterial : 15
@@ -83,8 +83,8 @@ let standard ={
   helper : 500,
   inboundLogistics : 500,
   outboundLogistics : 800,
-  labour : 1200,
-  salesInstallation : 1200,
+  labour : 1500,
+  salesInstallation : 1500,
   partnerMaterialMargin : 0,
   ucComissionLabour : 15,
   ucComissionMaterial : 15
@@ -106,8 +106,8 @@ let budget = {
   helper : 500,
   inboundLogistics : 500,
   outboundLogistics : 800,
-  labour : 1000,
-  salesInstallation : 1000,
+  labour : 1500,
+  salesInstallation : 1500,
   partnerMaterialMargin : 0,
   ucComissionLabour : 15,
   ucComissionMaterial : 15
@@ -124,12 +124,12 @@ function calculate(){
   let seatFoam = 4*inchFour
   let paddingFoam = inchTwo*2 + inchOne * 1 + inchHalf *0.5;
 
-  let fevicol=2,
-  staplerPin=1,
-  nails =1,
-  thread = 1,
-  jute = 2,
-  bottomFabric = 2,
+  let fevicol=materialFabricNeeded*0.5,
+  staplerPin=materialFabricNeeded*0.2,
+  nails =materialFabricNeeded*0.2,
+  thread = materialFabricNeeded*0.2,
+  jute = materialFabricNeeded*0.4,
+  bottomFabric = materialFabricNeeded*0.5,
   packinigMaterialCost = 1,
   plywood = materialFabricNeeded/8*3;
 
@@ -138,7 +138,7 @@ function calculate(){
   let inboundLogistics =1;
   let outboundLogistics = 1;
   let salesInstallation = 0.25
-  let labour = 1+(materialFabricNeeded/5-1)*0.25
+  let labour = materialFabricNeeded*0.2
 
   helper = labour
 
