@@ -1,7 +1,7 @@
 let luxury ={
   fabric : 1500,
   foam : 3200,
-  paddingFoam : 900,
+  paddingFoam : 3200,
   fevicol : 300,
   staplerPin : 120,
   nails : 80,
@@ -70,7 +70,7 @@ let premium = {
 let standard ={
   fabric : 600,
   foam : 454,
-  paddingFoam : 440,
+  paddingFoam : 454,
   fevicol : 300,
   staplerPin : 120,
   nails : 80,
@@ -93,7 +93,7 @@ let standard ={
 let budget = {
   fabric : 400,
   foam : 454,
-  paddingFoam : 440,
+  paddingFoam : 454,
   fevicol : 300,
   staplerPin : 120,
   nails : 80,
