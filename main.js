@@ -24,7 +24,7 @@ let luxury ={
 let ultimateComfortable = {
   fabric : 900,
   foam : 1671,
-  paddingFoam : 440,
+  paddingFoam : 1671,
   fevicol : 300,
   staplerPin : 120,
   nails : 80,
